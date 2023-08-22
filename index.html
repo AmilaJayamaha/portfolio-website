@@ -3,39 +3,123 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Amila Jayamaha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amila Jayamaha Portfolio</title>
+    <title>Portfolio Website Amila</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>Amila Jayamaha</h1>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <div>
+                    <h1 class="navbar-brand">Amila Jayamaha</h1>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-me">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="home-content" id="home-page">
+            <div class="name">
+                <h1>Hi, I'm Amila</h1>
+                <p>A Computer Science Undergraduate.</p>
+            </div>
+            
+        </div>
     </header>
+    </header>
+    <section class="about-me" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="left-content">
+                    <div>
+                        <h1 class="about-heading">About Me</h1>
+                    </div>
+                    <img src="AJ.jpg" alt="image" />
+                    <p>
+                        I am an enthusiastic, self-motivated, reliable,responsible and hard
+                        working person. I am a mature team worker and adaptable to all
+                        challenging situations. I am able to work well both in a team
+                        environment as well as using own initiative.
+                    </p>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am an enthusiastic, self-motivated, reliable,responsible and hard
-            working person. I am a mature team worker and adaptable to all
-            challenging situations. I am able to work well both in a team
-            environment as well as using own initiative
+    </section>
+    <section class='projects' id="projects">
+        <h2>Projects</h2>
+        <p>1.Smart grocery application using Angular,Node.Js<br>
+            2.Online Bookstore Web Application Using HTML,CSS,JS,XML and PHP<br>
+            3.Developed web application to manage the hotel internal services using
+            HTML,CSS<br>
+            4.Calculator with history using Python Programming
         </p>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to email me at <a
-                href="amilajayamaha96@gmail.com">amilajayamaha96@gmail.com</a> or connect with me on <a
-                href="https://www.linkedin.com/in/amilajayamaha/" target="_blank">LinkedIn</a>.</p>
     </section>
+    <div class="contact" id="contact-me">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <p class="mail">
+                    Get in touch with me <i class="fas fa-arrow-right"></i> amilajayamaha96@gmail.com
+                </p>
+                <p class="links">Or find me on:</p>
+                <a href="linkedin.com/in/amilajayamaha /" target="blank"><i class="fab fa-linkedin">linkedin</i></a>
+                <a href="github.com/AmilaJayamaha" target="blank"><i class="fab fa-github"></i> Github</a>
+                <a href="https://www.instagram.com/amila_iroshen/" target="blank"><i
+                        class="fab fa-instagram"></i>Instagram</a>
+            </div>
+        </div>
+    </div>
 
-   </body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                // checks if window is scrolled more than 500px, adds/removes solid class
+                if ($(this).scrollTop() > 550) {
+                    $('.navbar').addClass('solid');
+                    $('.back-to-top').addClass('visible');
+                } else {
+                    $('.navbar').removeClass('solid');
+                    $('.back-to-top').removeClass('visible');
+                }
+
+            });
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+</body>
 
 </html>
