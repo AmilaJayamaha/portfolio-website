@@ -97,39 +97,108 @@ header {
 .about-me {
     background-color: #07374a;
     padding: 6rem 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
-.about-me .about-heading {
-    color: #25b79f;
-    font-size: 2rem;
-    font-weight: 600;
+.about-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.about-content .left-content {
+    flex-basis: 30%;
     text-align: center;
 }
-
-.about-content img {
-    height: 200px;
-    width: 150px;
-    object-fit: cover;
+.about-content img{
+    height: auto;
+    max-width: 100%;
     border-radius: 50%;
 }
 
 .about-content p {
     font-size: 1.2rem;
-    color: #f0f0e6;
+    color: white;
     padding: 0 2.3rem;
     text-align: center;
 }
 
-.about-me .about-content {
+.about h1 {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0 2.3rem;
+    text-align: center;
+}
+.projects {
+    background: #25b79f;
+    padding: 6rem 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
 }
 
-.about-content .left-content {
-    flex-basis: 45%;
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #07374a; 
+    padding-bottom: 0.5rem;
+}
+
+.projects p {
+    color: #07374a; 
+    font-size: 1rem;
+    padding: 1rem 0; 
+    line-height: 1.5; 
+}
+
+
+.contact {
+    background: #07374a;
+    position: relative;
+    height: 92vh;
+}
+
+.contact-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.about-content .right-content {
-    flex-basis: 45%;
+.contact-content h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #25b79f;
+    padding-bottom: 0.5rem;
 }
+
+.contact-content .mail {
+    color: #f0f0e6;
+    padding-bottom: 0.2rem;
+    font-size: 1rem;
+}
+
+.contact-content .links {
+    color: #25b79f;
+    padding: 0.5rem;
+    padding-bottom: 1.8rem;
+    font-size: 1rem;
+}
+
+.contact-content a {
+    text-decoration: none;
+    color: #25b79f;
+    padding: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-content a:hover {
+    color: #f0f0e6;
+}
+
